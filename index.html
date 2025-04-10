@@ -1,1 +1,286 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            margin: 0;
+            color: #2c3e50;
+        }
+        
+        .language-toggle {
+            display: flex;
+            gap: 10px;
+        }
+        
+        button {
+            padding: 8px 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        button.active {
+            background-color: #2c3e50;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #3498db;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+        }
+        
+        .experience-item h3, .education-item h3 {
+            margin-bottom: 5px;
+        }
+        
+        .period {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .language-content {
+            display: none;
+        }
+        
+        .language-content.active {
+            display: block;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .contact-info {
+            margin-top: 20px;
+        }
+        
+        footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My CV</h1>
+            <div class="language-toggle">
+                <button id="en-btn" class="active">English</button>
+                <button id="sv-btn">Svenska</button>
+            </div>
+        </header>
+        
+        <!-- English Version -->
+        <div id="en-content" class="language-content active">
+            <div class="profile">
+                <img src="/api/placeholder/150/150" alt="Profile Photo" class="profile-image">
+                <div>
+                    <h2>John Doe</h2>
+                    <p>Web Developer</p>
+                    <div class="contact-info">
+                        <p>Email: john.doe@example.com</p>
+                        <p>Phone: +1 234 567 890</p>
+                        <p>Stockholm, Sweden</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>About Me</h2>
+                <p>I'm a passionate web developer with over 5 years of experience creating responsive and user-friendly web applications. I specialize in front-end development, with a strong foundation in HTML, CSS, and JavaScript. I'm dedicated to writing clean, maintainable code and staying up-to-date with the latest web technologies.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Experience</h2>
+                
+                <div class="experience-item">
+                    <h3>Senior Web Developer</h3>
+                    <div class="period">ABC Tech Company, Stockholm — 2020-Present</div>
+                    <p>Lead front-end development for multiple client projects, collaborating with designers and back-end developers to create responsive and accessible web applications. Implemented modern JavaScript frameworks and optimized website performance.</p>
+                </div>
+                
+                <div class="experience-item">
+                    <h3>Web Developer</h3>
+                    <div class="period">XYZ Digital Agency, Gothenburg — 2018-2020</div>
+                    <p>Developed and maintained websites for various clients across different industries. Worked in an agile team environment and participated in the full development lifecycle from concept to deployment.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Education</h2>
+                
+                <div class="education-item">
+                    <h3>Bachelor's Degree in Computer Science</h3>
+                    <div class="period">Stockholm University — 2015-2018</div>
+                    <p>Focused on web development and software engineering. Graduated with honors.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Skills</h2>
+                <p>HTML5, CSS3, JavaScript (ES6+), React, Vue.js, Node.js, Git, Responsive Design, Accessibility, Performance Optimization</p>
+            </div>
+        </div>
+        
+        <!-- Swedish Version -->
+        <div id="sv-content" class="language-content">
+            <div class="profile">
+                <img src="/api/placeholder/150/150" alt="Profilbild" class="profile-image">
+                <div>
+                    <h2>John Doe</h2>
+                    <p>Webbutvecklare</p>
+                    <div class="contact-info">
+                        <p>E-post: john.doe@example.com</p>
+                        <p>Telefon: +1 234 567 890</p>
+                        <p>Stockholm, Sverige</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Om mig</h2>
+                <p>Jag är en passionerad webbutvecklare med över 5 års erfarenhet av att skapa responsiva och användarvänliga webbapplikationer. Jag specialiserar mig på front-end-utveckling, med en stark grund i HTML, CSS och JavaScript. Jag är dedikerad till att skriva ren, underhållbar kod och hålla mig uppdaterad med de senaste webbteknikerna.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Erfarenhet</h2>
+                
+                <div class="experience-item">
+                    <h3>Senior Webbutvecklare</h3>
+                    <div class="period">ABC Tech Company, Stockholm — 2020-Nu</div>
+                    <p>Leder front-end-utveckling för flera kundprojekt, samarbetar med designers och back-end-utvecklare för att skapa responsiva och tillgängliga webbapplikationer. Implementerar moderna JavaScript-ramverk och optimerar webbplatsens prestanda.</p>
+                </div>
+                
+                <div class="experience-item">
+                    <h3>Webbutvecklare</h3>
+                    <div class="period">XYZ Digital Agency, Göteborg — 2018-2020</div>
+                    <p>Utvecklade och underhöll webbplatser för olika kunder inom olika branscher. Arbetade i en agil teammiljö och deltog i hela utvecklingscykeln från koncept till driftsättning.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Utbildning</h2>
+                
+                <div class="education-item">
+                    <h3>Kandidatexamen i Datavetenskap</h3>
+                    <div class="period">Stockholms Universitet — 2015-2018</div>
+                    <p>Fokuserade på webbutveckling och mjukvaruutveckling. Tog examen med utmärkelse.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Färdigheter</h2>
+                <p>HTML5, CSS3, JavaScript (ES6+), React, Vue.js, Node.js, Git, Responsiv Design, Tillgänglighet, Prestandaoptimering</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 John Doe</p>
+        </footer>
+    </div>
+
+    <script>
+        // Language toggle functionality
+        const enBtn = document.getElementById('en-btn');
+        const svBtn = document.getElementById('sv-btn');
+        const enContent = document.getElementById('en-content');
+        const svContent = document.getElementById('sv-content');
+        
+        enBtn.addEventListener('click', function() {
+            // Show English content
+            enContent.classList.add('active');
+            svContent.classList.remove('active');
+            
+            // Update button styles
+            enBtn.classList.add('active');
+            svBtn.classList.remove('active');
+            
+            // Update page language
+            document.documentElement.lang = 'en';
+        });
+        
+        svBtn.addEventListener('click', function() {
+            // Show Swedish content
+            svContent.classList.add('active');
+            enContent.classList.remove('active');
+            
+            // Update button styles
+            svBtn.classList.add('active');
+            enBtn.classList.remove('active');
+            
+            // Update page language
+            document.documentElement.lang = 'sv';
+        });
+    </script>
+</body>
+</html>
